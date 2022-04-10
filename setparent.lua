@@ -10,7 +10,7 @@ local function GetParents(Inst)
     return Parents
 end
 
-getgenv().setparent = function(Inst, Destination)
+local setparent = function(Inst, Destination)
     local Parents = {
         [Destination] = true
     }
@@ -49,3 +49,5 @@ getgenv().setparent = function(Inst, Destination)
         Signal:Enable()
     end
 end
+
+return setparent
