@@ -10,7 +10,7 @@ local function GetParents(Inst)
     return Parents
 end
 
-local setparent = function(Inst, Destination)
+local function setparent(Inst, Destination)
     local Parents = {
         [Destination] = true
     }
