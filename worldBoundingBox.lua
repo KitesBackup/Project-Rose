@@ -17,7 +17,8 @@ local function vertShape(cf, size2)
     return output
 end
 
-local function worldBoundingBox(set)
+local function worldBoundingBox(cf, size2)
+    local set = vertShape(cf, size2)
     local x, y, z = {}, {}, {}
     for i = 1, #set do x[i], y[i], z[i] = set[i].x, set[i].y, set[i].z end
     local min = Vector3.new(math.min(unpack(x)), math.min(unpack(y)), math.min(unpack(z)))
